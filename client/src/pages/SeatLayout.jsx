@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { assets, dummyDateTimeData, dummyShowsData } from '../assets/assets';
-import { Clock as ClockIcon } from 'lucide-react';
+import { ArrowRightIcon, Clock as ClockIcon } from 'lucide-react';
 import Loading from '../components/Loading';
 import isoTimeFormat from '../lib/isoTimeFormat';
 import BlurCircle from '../components/BlurCircle';
@@ -130,6 +130,12 @@ const SeatLayout = () => {
             </div>
           </div>
         </div>
+
+            <button onClick={()=> navigate('/my-booking')} className='flex items-center gap-1 mt-20 px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer active:scale-95'>
+              Procced to Checkout
+              <ArrowRightIcon strokeWidth={3} className='w-4 h-4' />
+            </button>
+
       </div>
     </div>
   ) : (
